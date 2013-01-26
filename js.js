@@ -15,8 +15,8 @@ $(function() {
     var plus = $(this).prev();
     var result = $(this).next();
     var roll = $.randRange(1, 20);
-    if(roll == 1) result.val("Nat 1");
-    else if(roll == 20) result.val("Nat 20");
+    if(roll == 1) result.val("N 1");
+    else if(roll == 20) result.val("N 20");
     else result.val(roll + parseInt(plus.val()));
   });
 
@@ -28,16 +28,11 @@ $(function() {
     $(this).parent().after($(this).parent().clone());
   });
 
-  $("#add-monster").click(function() {
-    $("#monsters").append($("#monster-source").children().clone());
-  });
+  $(".delete-monster").live("click", function() {
+    if(confirm("Really delete?")) $(this).parent().remove();
+  })
 
-  $("#save-sheet").click(function() {
-    localStorage.setItem("sheet", $("body").html());
-  });
-
-  $("#load-sheet").click(function() {
-    var sheet = localStorage.getItem("sheet");
-    if(sheet != null && sheet != "") $("body").html(sheet);
+  $(".add-monster").click(function() {
+    $(this).parent().append($("#monster-source").children().clone());
   });
 });

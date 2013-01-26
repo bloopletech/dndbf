@@ -8,26 +8,60 @@
     <script src="js.js"></script>
   </head>
   <body>
-    <div id="monsters">
+    <div id="dungeon-1" class="dungeon">
+      <div class="dungeon-inner">
+        <input type="button" class="add-monster" value="Add">
+        <h1>Dungeon 1</h1>
+      </div>
     </div>
-    <input type="button" id="add-monster" value="Add">
-    <input type="button" id="save-sheet" value="Save Sheet">
-    <input type="button" id="load-sheet" value="Load Sheet">
+    <div id="dungeon-2" class="dungeon">
+      <div class="dungeon-inner">
+        <input type="button" class="add-monster" value="Add">
+        <h1>Dungeon 2</h1>
+      </div>
+    </div>
+    <div id="dungeon-3" class="dungeon">
+      <div class="dungeon-inner last">
+        <input type="button" class="add-monster" value="Add">
+        <h1>Dungeon 3</h1>
+      </div>
+    </div>
+<!--    <div id="dungeon-4" class="dungeon">
+      <div class="dungeon-inner last">
+        <input type="button" class="add-monster" value="Add">
+        <h1>Dungeon 4</h1>
+      </div>
+    </div>-->
+    <div class="clear"></div>
     <div id="monster-source">
       <div class="monster">
-        <input type="text" placeholder="Name">
-        <input type="text" placeholder="Miniature">
+        <select>
+          <option>Miniature</option>
+          <option>Bulbasaur</option>
+          <option>Caterpie</option>
+          <option>Charmander</option>
+          <option>Mew</option>
+          <option>Mr. Mime</option>
+          <option>Pikachu</option>
+          <option>Polywrath</option>
+          <option>Rattata</option>
+          <option>Slowpoke</option>
+          <option>Squirtle</option>
+          <option>Togepi</option>
+        </select>
+        <input type="text" class="name" placeholder="Name">
         <input type="text" class="hp" placeholder="HP">
         <input type="text" class="damage" placeholder="Dmg">
         <div class="attacks">
-          <input type="button" class="add-attack" value="Add">
+          <input type="button" class="add-attack" value="Add Attack">
         </div>
         <input type="button" class="copy-monster" value="Copy">
+        <input type="button" class="delete-monster" value="Delete...">
       <div>
     </div>
     <div id="attack-source">
       <div class="attack">
-        <input type="text" placeholder="Attack Name">
+        <input type="text" class="attack-name" placeholder="Attack Name">
         <input type="text" class="plus" placeholder="Plus">
         <input type="button" class="roll" value="Roll">
         <input type="text" class="result" placeholder="Res">

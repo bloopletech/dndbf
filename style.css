@@ -1,23 +1,82 @@
-* { font: 20px/26px Inconsolata }
+* { font: 18px/22px Helvetica }
 
 body {
   padding: 0;
-  margin: 10px;
+  margin: 0;
 }
 
+#monster-source, #attack-source {
+  display: none;
+}
 
+.dungeon {
+  width: 33.333%;
+  float: left;
+}
+
+.dungeon-inner {
+  padding-right: 10px;
+  margin-right: 10px;
+  border-right: 1px solid #a0a0a0;
+  padding: 10px;
+}
+
+.dungeon-inner.last {
+  margin-right: 0;
+  border-right: none;
+
+}
+
+.dungeon h1 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.add-monster {
+  float: right;
+}
 
 .monster {
-  border: 1px solid #303030;
+  background-color: #f5f5a0;
+  border: 1px solid #808080;
   padding: 10px;
   margin: 10px 0;
 }
 
+.monster .add-attack, .monster .copy-monster, .monster .delete-monster {
+  display: none;
+}
+
+.monster:hover .add-attack, .monster:hover .copy-monster, .monster:hover .delete-monster {
+  display: inline;
+}
+
+input, select {
+  margin: 3px 0;
+}
+
+input[type=text] {
+  border: 1px solid #555555;
+}
+
+select {
+  margin: 0;
+  padding: 1px;
+}
+
+.name, .attack-name {
+  width: 174px;
+}
+
 .hp, .damage, .plus, .result {
-  width: 72px;
+  width: 38px;
 }
 
 
-#monster-source, #attack-source {
-  display: none;
+
+
+
+.clear {
+  clear: both;
 }

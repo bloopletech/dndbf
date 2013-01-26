@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>DM's Combat Friend</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="js.js"></script>
+  </head>
+  <body>
+    <div id="monsters">
+    </div>
+    <input type="button" id="add-monster" value="Add">
+    <input type="button" id="save-sheet" value="Save Sheet">
+    <input type="button" id="load-sheet" value="Load Sheet">
+    <div id="monster-source">
+      <div class="monster">
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="Miniature">
+        <input type="text" class="hp" placeholder="HP">
+        <input type="text" class="damage" placeholder="Dmg">
+        <div class="attacks">
+          <input type="button" class="add-attack" value="Add">
+        </div>
+        <input type="button" class="copy-monster" value="Copy">
+      <div>
+    </div>
+    <div id="attack-source">
+      <div class="attack">
+        <input type="text" placeholder="Attack Name">
+        <input type="text" class="plus" placeholder="Plus">
+        <input type="button" class="roll" value="Roll">
+        <input type="text" class="result" placeholder="Res">
+      </div>
+    </div>
+  </body>
+</html>

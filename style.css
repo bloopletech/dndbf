@@ -1,0 +1,23 @@
+* { font: 20px/26px Inconsolata }
+
+body {
+  padding: 0;
+  margin: 10px;
+}
+
+
+
+.monster {
+  border: 1px solid #303030;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.hp, .damage, .plus, .result {
+  width: 72px;
+}
+
+
+#monster-source, #attack-source {
+  display: none;
+}

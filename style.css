@@ -89,15 +89,22 @@ button img {
 }
 
 .conditions {
-  width: 180px;
+  width: 160px;
 }
 
 .hp, .damage, .plus, .result {
   width: 40px;
 }
 
-#rolls {
+#rolls-wrapper {
   margin: 10px;
+  text-align: center;
+}
+
+#rolls {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: left;
 }
 
 #results {

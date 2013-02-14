@@ -5,12 +5,13 @@
     <title>DM's Combat Friend</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="jquery.color.js"></script>
     <script src="js.js"></script>
   </head>
   <body>
      <div id="monster-source">
       <div class="monster">
-        <select class="miniature">
+        <select class="miniature" tabindex="-1">
           <option>Miniature</option>
           <option>Bulbasaur</option>
           <option>Caterpie</option>
@@ -24,21 +25,21 @@
           <option>Squirtle</option>
           <option>Togepi</option>
         </select>
-        <input type="text" class="name" placeholder="Name">
+        <input type="text" class="name" placeholder="Name" tabindex="-1">
         &bull;
-        <input type="text" class="hp" placeholder="HP">
+        <input type="text" class="hp" placeholder="HP" tabindex="-1">
         <input type="text" class="damage" placeholder="Dmg">
         &bull;
-        <input type="text" class="conditions" placeholder="Conditions">
+        <input type="text" class="conditions" placeholder="Conditions" tabindex="-1">
         <!-- <input type="button" class="change" value="CX"> -->
         &bull;
-        <button class="copy-monster changer"><img src="paste_plain.png"></button>
-        <button class="delete-monster changer"><img src="delete.png"></button>
+        <button class="copy-monster changer" tabindex="-1"><img src="paste_plain.png"></button>
+        <button class="delete-monster changer" tabindex="-1"><img src="delete.png"></button>
       </div>
     </div>
     <div id="dungeon-1" class="dungeon">
       <div class="dungeon-inner first">
-        <input type="button" class="add-monster" value="Add">
+        <input type="button" class="add-monster" value="Add" tabindex="-1">
         <h1>Dungeon 1</h1>
         <div class="monsters">
         </div>
@@ -46,7 +47,7 @@
     </div>
     <div id="dungeon-2" class="dungeon">
       <div class="dungeon-inner last">
-        <input type="button" class="add-monster" value="Add">
+        <input type="button" class="add-monster" value="Add" tabindex="-1">
         <h1>Dungeon 2</h1>
         <div class="monsters">
         </div>
@@ -56,7 +57,7 @@
     <div class="divider"></div>
     <div id="dungeon-3" class="dungeon">
       <div class="dungeon-inner first">
-        <input type="button" class="add-monster" value="Add">
+        <input type="button" class="add-monster" value="Add" tabindex="-1">
         <h1>Dungeon 3</h1>
         <div class="monsters">
         </div>
@@ -64,7 +65,7 @@
     </div>
     <div id="dungeon-4" class="dungeon">
       <div class="dungeon-inner last">
-        <input type="button" class="add-monster" value="Add">
+        <input type="button" class="add-monster" value="Add" tabindex="-1">
         <h1>Dungeon 4</h1>
         <div class="monsters">
         </div>
@@ -73,68 +74,68 @@
     <div class="clear"></div>
     <div class="divider"></div>
     <div id="rolls">
-      <input type="button" id="roll" value="Roll">
-      <input type="text" class="result" readonly>
+      <input type="button" id="roll" value="Roll" accesskey="r">
+      <input type="text" class="result" readonly tabindex="-1">
       <ol id="results">
         <li>
-          <input type="text" class="result" readonly>
+          <input type="text" class="result" readonly tabindex="-1">
         </li>
         <li>
-          <input type="text" class="result" readonly>
+          <input type="text" class="result" readonly tabindex="-1">
         </li>
         <li>
-          <input type="text" class="result" readonly>
+          <input type="text" class="result" readonly tabindex="-1">
         </li>
         <li>
-          <input type="text" class="result" readonly>
+          <input type="text" class="result" readonly tabindex="-1">
         </li>
         <li>
-          <input type="text" class="result" readonly>
+          <input type="text" class="result" readonly tabindex="-1">
         </li>
         <li>
-          <input type="text" class="result" readonly>
+          <input type="text" class="result" readonly tabindex="-1">
         </li>
         <li>
-          <input type="text" class="result" readonly>
+          <input type="text" class="result" readonly tabindex="-1">
         </li>
         <li>
-          <input type="text" class="result" readonly>
+          <input type="text" class="result" readonly tabindex="-1">
         </li>
         <li>
-          <input type="text" class="result" readonly>
+          <input type="text" class="result" readonly tabindex="-1">
         </li>
         <li>
-          <input type="text" class="result" readonly>
+          <input type="text" class="result" readonly tabindex="-1">
         </li>
         <li>
-          <input type="text" class="result" readonly>
+          <input type="text" class="result" readonly tabindex="-1">
         </li>
         <li>
-          <input type="text" class="result" readonly>
+          <input type="text" class="result" readonly tabindex="-1">
         </li>
         <li>
-          <input type="text" class="result" readonly>
+          <input type="text" class="result" readonly tabindex="-1">
         </li>
         <li>
-          <input type="text" class="result" readonly>
+          <input type="text" class="result" readonly tabindex="-1">
         </li>
         <li>
-          <input type="text" class="result" readonly>
+          <input type="text" class="result" readonly tabindex="-1">
         </li>
         <li>
-          <input type="text" class="result" readonly>
+          <input type="text" class="result" readonly tabindex="-1">
         </li>
         <li>
-          <input type="text" class="result" readonly>
+          <input type="text" class="result" readonly tabindex="-1">
         </li>
         <li>
-          <input type="text" class="result" readonly>
+          <input type="text" class="result" readonly tabindex="-1">
         </li>
         <li>
-          <input type="text" class="result" readonly>
+          <input type="text" class="result" readonly tabindex="-1">
         </li>
         <li>
-          <input type="text" class="result" readonly>
+          <input type="text" class="result" readonly tabindex="-1">
         </li>
       </ul>
       <div class="clear"></div>

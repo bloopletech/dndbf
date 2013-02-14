@@ -3,9 +3,15 @@ $(function() {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
 
-  $(".damage").live("change", function() {
+  $.fn.pulse = function(complete) {
+    $(this).css("backgroundColor", "#ffff00").animate({
+      backgroundColor: "#ffffff"
+    }, 1000, complete ? complete : $.noop);
+  };
+
+  $(".damage").live("change", function(event) {
     var hp = $(this).prev();
-    hp.val(parseInt(hp.val()) - parseInt($(this).val()));
+    hp.val(parseInt(hp.val()) - parseInt($(this).val())).pulse();
     $(this).val("");
 
     if(parseInt(hp.val()) < 0) $(this).parent().find(".delete-monster").click();
@@ -13,7 +19,12 @@ $(function() {
     if(event.keyCode == 32) $(this).change();
   });
 
+  var currentlyRolling = false;
+
   $("#roll").click(function() {
+    if(currentlyRolling) return;
+    currentlyRolling = true;
+
     var roll = $.randRange(1, 20);
 
     if(roll == 1) {
@@ -27,6 +38,10 @@ $(function() {
         $(result).val(roll + i);
       });
     }
+
+    $(".result:first").pulse(function() {
+      currentlyRolling = false;
+    });
   });
 
   /*$(".change").live("click", function() {
@@ -41,7 +56,7 @@ $(function() {
 
     var lastOption = $("#monster-source .miniature option")[lastIndex + 1];
     if(typeof lastOption == "undefined") {
-      alert("Too many mosnters!");
+      alert("Too many monsters!");
       return false;
     }
     else {
@@ -69,5 +84,9 @@ $(function() {
 
     var miniature = $(this).parent().find(".monsters").children().last().find(".miniature");
     miniature.val(nextMiniature());
+  });
+
+  $(window).keydown(function(event) {
+    if(event.keyCode == 32) $("#roll").click();
   });
 });

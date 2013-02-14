@@ -29,9 +29,9 @@ $(function() {
     }
   });
 
-  $(".change").live("click", function() {
+  /*$(".change").live("click", function() {
     $(this).parent().find(".changer").toggle();
-  })
+  })*/
 
   function nextMiniature() {
     var lastIndex = 0;
@@ -55,19 +55,19 @@ $(function() {
     var miniature = $(this).parent().next().find(".miniature");
     miniature.val(nextMiniature());
 
-    $(this).parent().find(".change").click();
+    //$(this).parent().find(".change").click();
   });
 
   $(".delete-monster").live("click", function() {
     if(confirm("Really delete?")) $(this).parent().remove();
 
-    $(this).parent().find(".change").click();
+    //$(this).parent().find(".change").click();
   })
 
   $(".add-monster").click(function() {
-    $(this).parent().append($("#monster-source").children().clone());
+    $(this).parent().find(".monsters").append($("#monster-source").children().clone());
 
-    var miniature = $(this).parent().children().last().find(".miniature");
+    var miniature = $(this).parent().find(".monsters").children().last().find(".miniature");
     miniature.val(nextMiniature());
   });
 });

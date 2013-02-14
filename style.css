@@ -15,16 +15,16 @@ body {
 }
 
 .dungeon-inner {
-  padding-right: 10px;
-  margin-right: 10px;
-  border-right: 1px dotted #000000;
   padding: 10px;
 }
 
-.dungeon-inner.last {
-  margin-right: 0;
-  border-right: none;
+.dungeon-inner.first {
+  margin-right: -1px;
+  border-right: 1px solid #000000;
+}
 
+.dungeon-inner.last {
+  border-left: 1px solid #000000;
 }
 
 .dungeon h1 {
@@ -34,24 +34,29 @@ body {
 }
 
 .divider {
-  margin: 10px 0;
-  padding: 0;
-  border-top: 1px dotted #000000;
+  border-top: 1px solid #000000;
 }
 
 .add-monster {
   float: right;
+  margin-top: 0;
 }
 
 .monster {
 }
 
+/*
 .monster .copy-monster, .monster .delete-monster {
   display: none;
 }
+*/
 
-input, select, .monster, #results, #results li {
-  margin: 3px 0;
+.monster, #results li {
+  margin-bottom: 5px;
+}
+
+input, button, select, #results, .monsters {
+  margin: 5px 0;
 }
 
 input[type=text], select {
@@ -67,12 +72,24 @@ select {
   padding: 1px;
 }
 
+button {
+  height: 26px;
+  line-height: 26px;
+  vertical-align: bottom;
+}
+
+button img {
+  display: inline-block;
+  margin-top: -8px;
+  vertical-align: middle;
+}
+
 .name {
-  width: 26px;
+  width: 120px;
 }
 
 .conditions {
-  width: 120px;
+  width: 180px;
 }
 
 .hp, .damage, .plus, .result {

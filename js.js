@@ -59,9 +59,9 @@ $(function() {
   });
 
   $("#dungeons").on("click", ".add-monster", function() {
-    $(this).parent().find(".monsters").append($("#monster-source").children().clone());
-
-    var miniature = $(this).parent().find(".monsters").children().last().find(".miniature");
+    var monsters = $(this).parent().parent().find(".monsters");
+    monsters.append($("#monster-source").children().clone());
+    var miniature = monsters.children().last().find(".miniature");
     miniature.val(nextMiniature());
   });
 

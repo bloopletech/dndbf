@@ -1,4 +1,6 @@
-* { font: 18px/22px Helvetica, Tahoma, Arial, sans-serif; }
+* {
+  font: 18px/22px Helvetica, Tahoma, Arial, sans-serif;
+}
 
 body {
   padding: 0;
@@ -97,7 +99,7 @@ button img {
 }
 
 #rolls-wrapper {
-  margin: 10px;
+  padding: 10px;
   text-align: center;
 }
 
@@ -133,4 +135,63 @@ button img {
 
 .clear {
   clear: both;
+}
+
+@media screen and (max-width: 1024px) {
+  * {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .dungeon-inner, #rolls-wrapper {
+    padding: 3px;
+  }
+
+  .dungeon h1 {
+    font-size: 20px;
+  }
+
+  .monster, #results li {
+    margin-bottom: 3px;
+  }
+
+  input, button, select, #results, .monsters {
+    margin: 3px 0;
+  }
+
+  input[type=text], select {
+    font-weight: normal;
+  }
+
+  button {
+    height: 22px;
+    line-height: 22px;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+  }
+
+  .name {
+    width: 94px;
+  }
+
+  .conditions {
+    width: 146px;
+  }
+
+  .hp, .damage, .result {
+    width: 34px;
+  }
+
+  .bullet {
+    display: none;
+  }
+
+  #results li {
+    margin-right: 18px;
+  }
+
+  #results li:before {
+    width: 30px;
+  }
 }

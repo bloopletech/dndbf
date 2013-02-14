@@ -5,19 +5,19 @@ body {
   margin: 0;
 }
 
-#monster-source, #attack-source {
+#monster-source {
   display: none;
 }
 
 .dungeon {
-  width: 33.333%;
+  width: 50%;
   float: left;
 }
 
 .dungeon-inner {
   padding-right: 10px;
   margin-right: 10px;
-  border-right: 1px solid #a0a0a0;
+  border-right: 1px dotted #000000;
   padding: 10px;
 }
 
@@ -33,48 +33,79 @@ body {
   margin-top: 0;
 }
 
+.divider {
+  margin: 10px 0;
+  padding: 0;
+  border-top: 1px dotted #000000;
+}
+
 .add-monster {
   float: right;
 }
 
 .monster {
-  background-color: #f5f5a0;
-  border: 1px solid #808080;
-  padding: 10px;
-  margin: 10px 0;
 }
 
-.monster .add-attack, .monster .copy-monster, .monster .delete-monster {
+.monster .copy-monster, .monster .delete-monster {
   display: none;
 }
 
-.monster:hover .add-attack, .monster:hover .copy-monster, .monster:hover .delete-monster {
-  display: inline;
+input, select, .monster, #results, #results li {
+  margin: 3px 0;
 }
 
-input, select {
-  margin: 3px 0;
+input[type=text], select {
+  font-weight: bold;
 }
 
 input[type=text] {
   border: 1px solid #555555;
+  text-align: center;
 }
 
 select {
-  margin: 0;
   padding: 1px;
 }
 
-.name, .attack-name {
-  width: 174px;
+.name {
+  width: 26px;
+}
+
+.conditions {
+  width: 120px;
 }
 
 .hp, .damage, .plus, .result {
-  width: 38px;
+  width: 40px;
 }
 
+#rolls {
+  margin: 10px;
+}
 
+#results {
+  counter-reset: item;
+  margin-left: 0;
+  padding-left: 0;
+}
 
+#results li {
+  display: inline-block;
+  float: left;
+  margin-right: 20px;
+}
+
+#results li:before {
+  content: "+" counter(item);
+  counter-increment: item;
+  display: inline-block;
+  width: 35px;
+  text-align: right;
+}
+
+#results li:nth-of-type(11) {
+  clear: both;
+}
 
 
 .clear {

@@ -9,14 +9,14 @@ $(function() {
     }, 1000, complete ? complete : $.noop);
   };
 
-  $("#dungeons").on("change", ".damage", function(event) {
-    var hp = $(this).prev();
-    hp.val(parseInt(hp.val()) - parseInt($(this).val())).pulse();
-    $(this).val("");
+  $("#dungeons").on("keydown", ".damage", function(event) {
+    if(event.keyCode == 32) {
+      var hp = $(this).prev();
+      hp.val(parseInt(hp.val()) - parseInt($(this).val())).pulse();
+      $(this).val("");
 
-    if(parseInt(hp.val()) < 0) $(this).parent().find(".delete-monster").click();
-  }).on("keydown", ".damage", function(event) {
-    if(event.keyCode == 32) $(this).change();
+      if(parseInt(hp.val()) < 0) $(this).parent().find(".delete-monster").click();
+    }
   });
 
   /*$(".change").live("click", function() {
